@@ -19,8 +19,19 @@ IG_USER_ID = os.getenv("IG_USER_ID")
 # ── Google Gemini API ─────────────────────────────────────────────────────────
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
+# ── Pollinations AI API ──────────────────────────────────────────────────────
+POLLINATIONS_API_KEY = os.getenv("POLLINATIONS_API_KEY")
+
+# ── ImgBB API (Image Hosting) ────────────────────────────────────────────────
+IMGBB_API_KEY = os.getenv("IMGBB_API_KEY")
+
 # ── Model Configuration ──────────────────────────────────────────────────────
-GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MODEL = "gemini-3.1-flash-lite"
+GEMINI_FALLBACK_MODELS = ["gemini-2.0-flash", "gemini-2.5-flash-lite-preview-06-17"]
+
+# ── Retry Configuration ──────────────────────────────────────────────────────
+MAX_RETRIES = 5
+INITIAL_BACKOFF = 5  # seconds
 
 # ── Image Generation Settings ────────────────────────────────────────────────
 IMAGE_WIDTH = 1024
@@ -37,6 +48,8 @@ def validate_config():
         "META_ACCESS_TOKEN": META_ACCESS_TOKEN,
         "IG_USER_ID": IG_USER_ID,
         "GEMINI_API_KEY": GEMINI_API_KEY,
+        "POLLINATIONS_API_KEY": POLLINATIONS_API_KEY,
+        "IMGBB_API_KEY": IMGBB_API_KEY,
     }
     missing = [name for name, value in required.items() if not value]
 
