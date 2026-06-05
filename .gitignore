@@ -19,3 +19,5 @@ temp_img.jpg
 .idea/
 *.swp
 *.swo
+
+output/
