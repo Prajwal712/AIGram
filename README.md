@@ -73,8 +73,8 @@ ai_insta_bot/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/ai_insta_bot.git
-cd ai_insta_bot
+git clone https://github.com/Prajwal712/AIGram.git
+cd AIGram
 ```
 
 ### 2. Create & activate a virtual environment
@@ -101,7 +101,7 @@ Edit `.env` and fill in your credentials:
 
 | Variable | Where to get it |
 |---|---|
-| `META_ACCESS_TOKEN` | [Meta for Developers](https://developers.facebook.com/) → Instagram Graph API → Generate Token |
+| `META_ACCESS_TOKEN` | [Meta for Developers](https://developers.facebook.com/) → Instagram API → Generate Token |
 | `IG_USER_ID` | Your Instagram Business Account User ID (found in the API explorer) |
 | `GEMINI_API_KEY` | [Google AI Studio](https://aistudio.google.com/apikey) |
 
@@ -136,7 +136,7 @@ Downloads the generated image, uploads it to **Gemini Vision**, and asks it to:
 Returns a structured JSON response with `status` and `caption` fields.
 
 ### `src/instagram_publisher.py`
-Handles the two-step Instagram Graph API publishing flow:
+Handles the two-step Instagram API publishing flow:
 1. **Create a media container** with the image URL and caption
 2. **Publish the container** after a configurable wait period for Meta's image processing
 
@@ -173,7 +173,7 @@ This project is for educational and personal use. Ensure your use of the Instagr
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 - [Google Gemini](https://ai.google.dev/) — AI prompt generation & vision analysis
 - [Pollinations AI](https://pollinations.ai/) — Free AI image generation
